@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+<link rel="stylesheet" href="assets/css/feathericon.min.css">
+<link rel="stylesheet" href="assets/plugins/morris/morris.css">
+
+<link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+
+<div class="main-wrapper">
+
+<div class="header">
+
+<div class="header-left">
+<a href="index.html" class="logo">
+<img src="assets/img/logo.png" alt="Logo">
+</a>
+<a href="index.html" class="logo logo-small">
+<img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
+</a>
+</div>
+
+<a href="javascript:void(0);" id="toggle_btn">
+<i class="fe fe-text-align-left"></i>
+</a>
+
+
+<a class="mobile_btn" id="mobile_btn">
+<i class="fa fa-bars"></i>
+</a>
+
+
+<ul class="nav user-menu">
+
+<li class="nav-item dropdown has-arrow">
+<a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
+<span class="user-img"><img class="rounded-circle" src="assets/img/profiles/avatar-01.jpg" width="31" alt="Ryan Taylor"></span>
+</a>
+<div class="dropdown-menu">
+<div class="user-header">
+<div class="avatar avatar-sm">
+<img src="assets/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle">
+</div>
+<div class="user-text">
+<h6>Ryan Taylor</h6>
+<p class="text-muted mb-0">Administrator</p>
+</div>
+</div>
+<a class="dropdown-item" href="profile.html">My Profile</a>
+<a class="dropdown-item" href="">Logout</a>
+</div>
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="sidebar" id="sidebar">
+<div class="sidebar-inner slimscroll">
+<div id="sidebar-menu" class="sidebar-menu">
+<ul>
+<li class="menu-title">
+<span>Main Menu</span>
+</li>
+<li class="active">
+<a href="dashboard.html"><i class="fe fe-home"></i> <span>Dashboard</span></a>
+</li>
+<li>
+<a href="specialities.html"><i class="fe fe-users"></i> <span>Specialities</span></a>
+</li>
+<li>
+<a href="doctors.html"><i class="fe fe-user-plus"></i> <span>Doctors</span></a>
+</li>
+<li>
+<a href="clinics.html"><i class="fe fe-star-o"></i> <span>Clinics</span></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div class="page-wrapper">
+<div class="content container-fluid">
+
+<div class="page-header">
+<div class="row">
+<div class="col-sm-12">
+<h3 class="page-title">Welcome Admin!</h3>
+<ul class="breadcrumb">
+<li class="breadcrumb-item active">Dashboard</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-xl-3 col-sm-6 col-12">
+<div class="card">
+<div class="card-body">
+<div class="dash-widget-header">
+<span class="dash-widget-icon text-primary border-primary">
+<i class="fe fe-users"></i>
+</span>
+<div class="dash-count">
+<a href="doctors.html" > <h3>0</h3> </a>
+</div>
+</div>
+<div class="dash-widget-info">
+<h6 class="text-muted">Doctors</h6>
+<div class="progress progress-sm">
+<div class="progress-bar bg-primary w-100"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-xl-3 col-sm-6 col-12">
+<div class="card">
+<div class="card-body">
+<div class="dash-widget-header">
+<span class="dash-widget-icon text-danger border-danger">
+<i class="fe fe-money"></i>
+</span>
+<div class="dash-count">
+<a href="clinics.html" > <h3>0</h3> </a>
+</div>
+</div>
+<div class="dash-widget-info">
+<h6 class="text-muted">Clinics</h6>
+<div class="progress progress-sm">
+<div class="progress-bar bg-danger w-100"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="row">
+<div class="col-md-12">
+
+<div class="card card-table">
+<div class="card-header">
+<h4 class="card-title">Last 10 Doctor Registrations</h4>
+</div>
+<div class="card-body">
+<div class="table-responsive">
+<table class="table table-hover table-center mb-0">
+<thead>
+<tr>
+<th>Doctor Name</th>
+<th>Speciality</th>
+<th>Clinic Name</th>
+<th>Location</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<h2 class="table-avatar">
+<a href="profile.html" class="avatar avatar-sm me-2"><img class="avatar-img rounded-circle" src="assets/img/doctors/doctor-thumb-01.jpg" alt="User Image"></a>
+<a href="profile.html">Dr. Ruby Perrin</a>
+</h2>
+</td>
+<td>Dental</td>
+<td>ABC Clinic</td>
+<td>Dubai</td>
+<td>Active</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+<script src="assets/js/jquery-3.7.0.min.js"></script>
+
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="assets/plugins/raphael/raphael.min.js"></script>
+<script src="assets/plugins/morris/morris.min.js"></script>
+<script src="assets/js/chart.morris.js"></script>
+
+<script src="assets/js/script.js"></script>
+</body>
+
+</html>

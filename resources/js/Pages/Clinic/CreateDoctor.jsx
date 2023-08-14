@@ -213,7 +213,7 @@ const CreateDoctor = ({ user, countries, states, specialities, qualifications })
       <label class="col-lg-3 col-form-label">Documents</label>
       <div class="col-lg-9">
       <input type="file" class="form-control" multiple onChange={(e) => setData('documents', e.target.files)} />
-      Upload with PDF format
+      Documents must with PDF format
       <p style={{ color: 'red' }}>{errors.documents}</p>
       </div>
       </div>

@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('time_slots', function (Blueprint $table) {
             $table->id();
-            $table->integer('doctor_id');
-            $table->integer('day_id');
-            $table->string('time');
+            $table->string('clinic_id');
+            $table->string('time_from');
+            $table->string('time_to');
             $table->timestamps();
         });
     }

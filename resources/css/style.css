@@ -1,0 +1,118 @@
+.visits .visit-btns {
+  color: #272b41;
+  background-color: #ffffff;
+  width: 80%;
+  margin-bottom: 10px;
+  display: block;
+  outline: unset;
+  cursor: pointer;
+}
+.visits input:checked ~ .visit-rsn {
+  background-color: #09e5ab;
+  color: #ffffff;
+  border-radius: 4px;
+}
+.visits input:checked ~ .visit-rsn:before {
+  opacity: 1;
+}
+.visits input:disabled ~ .visit-rsn {
+  background-color: #e30303;
+  color: #ffffff;
+  border-radius: 5px;
+}
+.visits input.form-check-input {
+  opacity: 0;
+  visibility: hidden;
+  margin-left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.visits .form-check-input {
+  opacity: 0;
+}
+.visits span.visit-rsn {
+  background: #F3F9FF;
+  border: 0;
+  border-radius: 5px;
+  color: #64627C;
+  display: inline-block;
+  font-size: 14px;
+  margin-bottom: 0px;
+  text-align: center;
+  position: relative;
+  font-weight: 600;
+  min-width: 133px;
+  width: 100%;
+  padding: 13px 5px;
+}
+.visits span.visit-rsn:before {
+  color: #09e5ab;
+  background-color: #ffffff;
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-size: 10px;
+  font-weight: 900;
+  border-radius: 50px;
+  width: 18px;
+  height: 18px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+
+/* text editor*/
+.rs-picker-default .rs-picker-toggle.rs-btn {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  width: 282px;
+}
+
+/* picked date align */
+.rs-picker-default .rs-picker-toggle {
+  position: relative;
+  z-index: 5;
+  padding-right: 67px;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  color: #575757;
+  border: 1px solid #e5e5ea;
+  padding-left: 44px;
+}
+/* calander align */
+.rs-picker-toggle-caret {
+  display: inline-block;
+  margin-right: 240px;
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-weight: normal;
+  color: #8e8e93;
+}
+
+/* ok button style */
+.rs-picker-toolbar-right-btn-ok { 
+  text-align: center; 
+  cursor: pointer;
+  outline: 0 ; 
+  border: none; 
+  padding: 8px 12px; 
+  font-size: 14px; 
+  border-radius: 30px;
+  color: #fff;
+  background-color: #3498ff;
+  width: 100px;
+}
+
+/* range style */
+.rs-picker-menu .rs-calendar .rs-calendar-table-cell-content {
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 21px;
+  display: inline-block;
+}

@@ -1,8 +1,10 @@
 import ClinicLayout from '@/Layouts/ClinicLayout'
-import { Head, Link } from '@inertiajs/react'
+import { Head, Link, usePage } from '@inertiajs/react'
 import React, { useState } from 'react'
 
 const Doctor = ({ user, doctors }) => {
+  const { flash } = usePage().props;
+
   const [constantID, setConstantID] = useState('');
   console.log(constantID);
   return (
@@ -30,6 +32,10 @@ const Doctor = ({ user, doctors }) => {
       </div>
 
       <div className="row">
+      {flash.message && (
+        <div class="alert alert-success" role="alert">{flash.message}</div>
+        // <p style={{ color: 'green' }}></p>  
+      )}
       <div className="col-sm-12">
       <div className="card">
       <div className="card-body">
@@ -59,7 +65,16 @@ const Doctor = ({ user, doctors }) => {
       <td>{doctor.status}</td>
       <td className="text-end">
       <div className="actions">
-      <Link className="btn btn-sm bg-success-light" href={`/doctor/${doctor.first_name.split(' ').join('-')}/edit`}>
+      {doctor.status === 'Active' ? (
+        <Link className="btn btn-sm bg-success-light me-1" href={`/schedule-time/${doctor.first_name.split(' ').join('-')}`}>
+        <i className="fe fe-pencil"></i> Schedule Time
+        </Link>
+      ) : (
+        <Link style={{ pointerEvents: 'none', opacity: '0.7' }} className="btn btn-sm me-1 btn-secondary">
+          <i className="fe fe-pencil"></i>Schedule Time
+        </Link>
+      )}
+      <Link className="btn btn-sm bg-success-light me-1" href={`/doctor/${doctor.first_name.split(' ').join('-')}/edit`}>
       <i className="fe fe-pencil"></i> Edit
       </Link>
       <a data-bs-toggle="modal" href="#delete_modal" onClick={(e) => setConstantID(doctor.unique_id)} className="btn btn-sm bg-danger-light">

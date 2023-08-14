@@ -22,6 +22,9 @@ const ClinicSidebar = () => {
     <li className={'/doctor' === url && 'active'}>
     <a href="/doctor"><i className="fe fe-user-plus"></i> <span>Doctors</span></a>
     </li>
+    <li className={'/available-time' === url && 'active'}>
+    <a href="/available-time"><i className="fe fe-user-plus"></i> <span>Available Time</span></a>
+    </li>
     </ul>
     </div>
     </div>

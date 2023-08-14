@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\TimeSlot;
 use App\Http\Requests\StoreTimeSlotRequest;
 use App\Http\Requests\UpdateTimeSlotRequest;
+use Illuminate\Http\Request;
 
 class TimeSlotController extends Controller
 {
@@ -27,9 +28,21 @@ class TimeSlotController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreTimeSlotRequest $request)
+    public function store(Request $request)
     {
-        //
+        $request->validate([
+            'time_from' => 'required',
+            'time_to' => 'required',
+        ]);
+
+        TimeSlot::create([
+            'clinic_id' => $request->clinic_id,
+            'time_from' => $request->time_from,
+            'time_to' => $request->time_to,
+        ]);
+
+        return redirect()->back();
+
     }
 
     /**

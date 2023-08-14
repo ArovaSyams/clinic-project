@@ -66,7 +66,7 @@ class DoctorController extends Controller
             "qualifications" => 'required',
             "service" => 'required',
             "image" => 'required|image',
-            // "documents" => 'required|mimes:pdf,doc,docx|max:10000'
+            "documents.*" => 'required|mimes:pdf|max:10000'
         ]);
 
         Doctor::create([
@@ -111,7 +111,7 @@ class DoctorController extends Controller
             }
         }
 
-        return redirect('doctor');
+        return redirect('doctor')->with('message',  "Success to create doctor");
     }
 
     /**
@@ -235,7 +235,7 @@ class DoctorController extends Controller
             }
         }
 
-        return redirect('doctor');
+        return redirect('doctor')->with('message',  "Success to edit doctor");
     }
 
     /**

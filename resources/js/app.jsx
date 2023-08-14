@@ -1,5 +1,6 @@
 // import './bootstrap';
 // import '../css/app.css';
+import '../css/style.css';
 
 import '/public/dashboard-assets/css/bootstrap.min.css';
 // import '/public/dashboard-assets/plugins/fontawesome/css/fontawesome.min.css';

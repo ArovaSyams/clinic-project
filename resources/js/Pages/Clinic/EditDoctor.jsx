@@ -243,17 +243,17 @@ const EditDoctor = ({ user, doctor, doctorQualifications, qualifications, docume
         <h3 class="page-title">Edit Profile</h3>
         <li class="breadcrumb-item active"><br/></li>
         </ul>
-        </div>
+      </div>
         <div class="row">
             <div class="col-md-12">
               <div class="card">
 
                 <div class="card-body">
                 <div class="form-group row">
-                <label class="col-lg-2 col-form-label">
-                <img src={`/storage/${doctor.image}`} alt="" width={150} style={{ borderRadius: 10 }} />
+                <label class="col-lg-3 col-form-label">
+                <img src={`/storage/${doctor.image}`} alt="" style={{ width: 220,height: 220, objectFit: 'cover', borderRadius: 300 }} />
                 </label>
-                <div class="col-lg-10">
+                <div class="col-lg-9">
                 <input onChange={(e) => setData('image', e.target.files[0])} onClick={(e) => setData('id', doctor.unique_id)} type="file" class="form-control mt-2" />
                 </div>
                 </div>

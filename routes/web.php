@@ -6,7 +6,9 @@ use App\Http\Controllers\ClinicController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ScheduleTimeController;
 use App\Http\Controllers\SpecialityController;
+use App\Http\Controllers\TimeSlotController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -60,9 +62,14 @@ Route::middleware('admin')->group(function () {
 Route::middleware('clinic')->group(function () {
     Route::get('clinic-dashboard', [ClinicController::class, 'index'])->name('clinic.dashboard');
     Route::get('/doctor', [ClinicController::class, 'doctor'])->name('doctor');
-
     Route::get('/create-doctor', [DoctorController::class, 'create'])->name('create.dashboard');
     Route::get('/doctor/{id}/edit', [DoctorController::class, 'edit'])->name('edit.dashboard');
+    Route::get('/available-time', [ClinicController::class, 'availableTime'])->name('available-time');
+    Route::get('/schedule-time/{doctor}', [ClinicController::class, 'scheduleTime'])->name('schedule-time');
+    
+    Route::post('/available-time', [TimeSlotController::class, 'store'])->name('store-available-time');
+    Route::post('/schedule-time', [ScheduleTimeController::class, 'store'])->name('store-schedule-time');
+    Route::post('/delete-schedule-time', [ScheduleTimeController::class, 'destroy'])->name('destroy-schedule-time');
 
     Route::post('/doctor/{id}/edit', [DoctorController::class, 'update'])->name('update.dashboard');
     Route::post('/doctor', [DoctorController::class, 'store'])->name('doctor.store');

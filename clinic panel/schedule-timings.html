@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Schedule Timings</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+<link rel="stylesheet" href="assets/css/feathericon.min.css">
+
+<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+
+<link rel="stylesheet" href="assets/css/custom.css">
+
+
+<style>
+
+
+.visits .visit-btns {
+  color: #272b41;
+  background-color: #ffffff;
+  width: 80%;
+  margin-bottom: 10px;
+  display: block;
+  outline: unset;
+  cursor: pointer;
+}
+.visits input:checked ~ .visit-rsn {
+  background-color: #09e5ab;
+  color: #ffffff;
+  border-radius: 4px;
+}
+.visits input:checked ~ .visit-rsn:before {
+  opacity: 1;
+}
+.visits input:disabled ~ .visit-rsn {
+  background-color: #e30303;
+  color: #ffffff;
+  border-radius: 5px;
+}
+.visits input.form-check-input {
+  opacity: 0;
+  visibility: hidden;
+  margin-left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.visits .form-check-input {
+  opacity: 0;
+}
+.visits span.visit-rsn {
+  background: #F3F9FF;
+  border: 0;
+  border-radius: 5px;
+  color: #64627C;
+  display: inline-block;
+  font-size: 14px;
+  margin-bottom: 0px;
+  text-align: center;
+  position: relative;
+  font-weight: 600;
+  min-width: 133px;
+  width: 100%;
+  padding: 13px 5px;
+}
+.visits span.visit-rsn:before {
+  color: #09e5ab;
+  background-color: #ffffff;
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-size: 10px;
+  font-weight: 900;
+  border-radius: 50px;
+  width: 18px;
+  height: 18px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+
+</style>
+
+
+</head>
+<body>
+
+<div class="main-wrapper">
+
+<div class="header">
+
+<div class="header-left">
+<a href="index.html" class="logo">
+<img src="assets/img/logo.png" alt="Logo">
+</a>
+<a href="index.html" class="logo logo-small">
+<img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
+</a>
+</div>
+
+<a href="javascript:void(0);" id="toggle_btn">
+<i class="fe fe-text-align-left"></i>
+</a>
+
+
+<a class="mobile_btn" id="mobile_btn">
+<i class="fa fa-bars"></i>
+</a>
+
+
+<ul class="nav user-menu">
+
+
+
+<li class="nav-item dropdown has-arrow">
+<a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
+<span class="user-img"><img class="rounded-circle" src="assets/img/profiles/avatar-01.jpg" width="31" alt="Ryan Taylor"></span>
+</a>
+<div class="dropdown-menu">
+<div class="user-header">
+<div class="avatar avatar-sm">
+<img src="assets/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle">
+</div>
+<div class="user-text">
+<h6>Ryan Taylor</h6>
+<p class="text-muted mb-0">Administrator</p>
+</div>
+</div>
+<a class="dropdown-item" href="profile.html">My Profile</a>
+<a class="dropdown-item" href="">Logout</a>
+</div>
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="sidebar" id="sidebar">
+<div class="sidebar-inner slimscroll">
+<div id="sidebar-menu" class="sidebar-menu">
+<ul>
+<li class="menu-title">
+<span>Main Menu</span>
+</li>
+<li>
+<a href="dashboard.html"><i class="fe fe-home"></i> <span>Dashboard</span></a>
+</li>
+<li>
+<a href="doctors.html"><i class="fe fe-user-plus"></i> <span>Doctors</span></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div class="page-wrapper">
+<div class="content container-fluid">
+
+<div class="page-header">
+<div class="row">
+<div class="col">
+<h3 class="page-title">Schedule Timings</h3>
+<ul class="breadcrumb">
+<li class="breadcrumb-item active">Clinic Manager</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-md-12">
+<div class="card">
+
+<div class="card-body">
+<form action="#">
+<div class="row">
+<div class="col-xl-6">
+<div class="form-group row">
+<label class="col-lg-3 col-form-label">Date From</label>
+<div class="col-lg-9">
+<input type="date"  class="form-control">
+</div>
+</div>
+</div>
+<div class="col-xl-6">
+<div class="form-group row">
+<label class="col-lg-3 col-form-label">Date To</label>
+<div class="col-lg-9">
+<input type="date"  class="form-control">
+</div>
+</div>
+</div>
+<div class="col-xl-6">
+<div class="form-group row">
+<label class="col-lg-3 col-form-label">Available Slots</label>
+<div class="col-lg-9">
+<input type="text"  class="form-control">
+</div>
+</div>
+</div>
+<div class="col-xl-12">
+<div class="token-slot mt-2">
+<div class="form-check-inline visits me-0">
+<label class="visit-btns">
+<input type="checkbox" class="form-check-input">
+<span class="visit-rsn" data-bs-toggle="tooltip" title="10:00 AM">10:00 AM - 12:00 PM</span>
+</label>
+</div>
+<div class="form-check-inline visits me-0">
+<label class="visit-btns">
+<input type="checkbox" class="form-check-input">
+<span class="visit-rsn" data-bs-toggle="tooltip" title="03:00 PM">03:00 PM - 06:00 PM</span>
+</label>
+</div>
+<div class="form-check-inline visits me-0">
+<label class="visit-btns">
+<input type="checkbox" class="form-check-input">
+<span class="visit-rsn" data-bs-toggle="tooltip" title="03:20 PM">01:30 PM - 02:30 PM</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+<div class="text-end">
+<button type="submit" class="btn btn-primary">Submit</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+
+<script>
+
+</script>
+
+
+
+
+<script src="assets/js/jquery-3.7.0.min.js"></script>
+
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<script src="assets/js/moment.min.js"></script>
+<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+
+<script src="assets/js/script.js"></script>
+</body>
+
+</html>
